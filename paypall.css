@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+  }
+p {
+    font-family: sans-serif;
+}
+  
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(107, 195, 215);
+}
+.cont {
+    height: 100%;
+    width: 100vw;
+    background-color: rgb(68, 112, 148);
+    
+    display: grid;
+    grid-template-columns: 5.25fr 4fr;
+    grid-template-areas:
+    'll rr'
+    ;
+}
+.left {
+    margin-top: 4em;
+    grid-area: ll;
+    background-color: rgb(250,248,245);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 1.4rem;
+}
+.inleft {
+    background-color: rgb(30, 66, 97);
+    border-radius: 1rem;
+    margin-right: 2rem;
+    width: 35rem;
+}
+#recent {
+    margin-top: 5rem;
+    height: 17.5rem;
+    width: 36rem;
+    background-color: rgb(250,248,245);
+    
+    display: grid;
+    grid-template-rows: 16rem 0.5rem 1rem;
+    grid-template-columns: 1rem 35rem;
+    grid-template-areas: 
+    'n a'
+    'n w'
+    'n b'
+    ;
+}
+.content1 {
+    grid-area: a;
+    border-radius: 1rem;
+    background-color: rgb(229,229,229);
+    border: solid 1px rgb(229,229,229);
+
+    display: grid;
+    grid-template-columns: 5.25fr 4fr;
+    grid-template-areas:
+    'l r'
+    ;
+}
+.details {
+    grid-area: l;
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.amount {
+    font-size: 2.4rem;
+    color: rgb(0,112,224);
+    margin-top: 3rem;
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+.s {
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.3rem;
+    font-size: 1.2rem;
+}
+.img {
+    grid-area: r;
+    background-color: rgb(185,239,252);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img > img {
+    height: 80%;
+    width: auto;
+    object-fit: contain;
+    margin-left: 10px;
+}
+.from {
+    overflow: hidden;
+    height: 2.4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1.3rem;
+}
+.from > img {
+    height: 2.2rem;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+.from > p {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+}
+a {
+    color: rgb(84,93,104);
+}
+.scroll {
+    grid-area: b;
+    border-radius: 1rem;
+    background-color: rgb(250,248,245);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.3rem;
+}
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgb(230,224,217);
+}
+#bluecirc {
+    background-color: rgb(0,112,224);
+}
+
+
+
+
+#balance {
+    height: 14rem;
+    background-color: white;
+    border: solid 1px rgb(229,229,229);
+}
+.baltop {
+    margin-left: 1.6rem;
+    margin-top: 1.3rem;
+    width: 90%;
+    height: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.baltop > img {
+    height: 1.9rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.balamount {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+.av {
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+#balance > button {
+    margin-left: 1.4rem;
+    margin-top: 1.1rem;
+    border-style: none;
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    background-color: rgb(0,48,135);
+    border-radius: 2rem;
+}
+
+
+
+#listrecent {
+    height: 37rem;
+    background-color: white;
+    border: solid 1px rgb(229,229,229);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.ra {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+.listcont {
+    width: 100%;
+    height: 30rem;
+    background-color: white;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.listitem {
+    width: 91%;
+    height: 8rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    border: solid 1px rgb(229,229,229);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4.5rem 26rem;
+    grid-template-areas:
+    'icon details'
+    'icon date' 
+    ;
+}
+.carddd {
+    width: 91%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 6rem 22rem;
+    grid-template-areas:
+    'icon details'
+    'icon date' 
+    ;
+}
+.typename {
+    grid-area: details;
+    font-size: 1.1rem;
+    align-self: flex-end;
+}
+.type {
+    grid-area: icon;
+    width: 6rem;
+    height: 3rem;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 0.8rem;
+}
+.pfp {
+    grid-area: icon;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2.5rem;
+    align-self: center;
+    justify-self: center;
+    margin-left: 0.7rem;
+}
+
+.info {
+    grid-area: details;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.username {
+    margin-left: 0.5rem;
+}
+.value {
+    color: rgb(15,133,20);
+}
+.date {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+.florate {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+}
+.sha {
+    margin-top: 0.8rem;
+    margin-left: 1.5rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: rgb(0,112,224);
+}
+#mit {
+    background-color: rgb(35, 35, 35);
+}
+#stanford {
+    background-color: rgb(199, 57, 57);
+}
+#duke {
+    background-color: rgb(19, 19, 84);
+}
+#harvard {
+    background-color: rgb(154, 43, 43);
+}
+#princeton {
+    display: flex;
+    align-items: center;
+}
+#princeton > img {
+    width: 70%;
+    height: auto;
+    margin-left: 0.4rem;
+}
+
+
+.right {
+    margin-top: 4em;
+    grid-area: rr;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.buttons {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 26rem;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons > button {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(0,48,135);
+    border-style: none;
+    border-radius: 3rem;
+    padding: 0.8rem 5rem 0.8rem 5rem;
+}
+.circles {
+    margin-left: 2rem;
+    width: 26rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+.incirlces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.circicons, .circuser {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 3rem;
+    background-color: rgb(250,248,245);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*object-fit: contain;*/
+}
+.circicons > img {
+    object-fit: contain;
+    height: 60%;
+    width: auto;
+}
+.circuser > img {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+}
+.thetext > p {
+    text-align: center;
+    width: 4rem;
+}
+.thetext {
+    margin-top: 0.8rem;
+    /*background-color: aqua;*/
+}
+.return {
+    margin-left: 1.5rem;
+    width: 26rem;
+    height: 2rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.return > img {
+    height: 1.8rem;
+    width: auto;
+    object-fit: contain;
+}
+.users {
+    margin-left: 2rem;
+    width: 26rem;
+
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1rem;
+}
+.management {
+    margin-left: 1.5rem;
+}
+.inmanage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.manageicon {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.manageicon > img {
+    height: 80%;
+    width: auto;
+}
+#registernow {
+    color: rgb(0,112,224);
+}
+
+
+
+
+
+.top {
+    position: fixed;
+    background-color: rgb(20,44,142);
+    width: 100vw;
+    height: 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topleft {
+    width: 35rem;
+    height: 3rem;
+    background-color: rgb(20,44,142);
+    margin-left: 2rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inTL {
+    background-color: rgb(39,65,154);
+    padding: 0.9em 1.1em 0.9em 1.1em;
+    border-radius: 2em;
+    color: rgb(255,249,252);
+}
+#logo {
+    background-color: rgb(20,44,142);
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#logo > img {
+    height: 67%;
+    width: 67%;
+}
+.topright {
+    width: 12rem;
+    height: 3rem;
+    background-color: rgb(20,44,142);
+    margin-right: 4rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inTR > img {
+    height: 70%;
+    width: 70%;
+}
+#logout {
+    background-color: rgb(39,65,154);
+    padding: 0.9em 1.1em 0.9em 1.1em;
+    border-radius: 2em;
+    color: rgb(255,249,252);
+}
